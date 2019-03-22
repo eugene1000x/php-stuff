@@ -1,0 +1,13 @@
+
+<!-- TODO: Use absolute path for bootstrap file. -->
+<phpunit
+  beStrictAboutOutputDuringTests="true"
+  bootstrap="phpunit_bootstrap.php"
+>
+  <testsuites>
+    <testsuite name="all">
+      <!-- TODO: Get rid of hard-coded path. -->
+      <directory suffix=".phpunit.php">A:/dev/projects/php_stuff/src/</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
