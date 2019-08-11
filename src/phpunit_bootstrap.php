@@ -3,7 +3,7 @@
 
 require_once __DIR__ .'/../vendor/autoload.php';
 
-require_once \php_stuff\config\Config::$ROOT_DIR .'/src/bootstrap.php';
+require_once \eugenejonas\php_stuff\config\Config::$ROOT_DIR .'/src/bootstrap.php';
 
 
 //Services::$entityManager = Services::createEntityManager();

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace php_stuff\error_handling;
+namespace eugenejonas\php_stuff\error_handling;
 
 
 class UnxpectedException extends \Exception

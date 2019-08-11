@@ -1,7 +1,7 @@
 <?php
 
 
-require_once \php_stuff\config\Config::$ROOT_DIR .'/src/time.php';
+require_once \eugenejonas\php_stuff\config\Config::$ROOT_DIR .'/src/time.php';
 
 
 class UnitTest_floorToDay extends \PHPUnit\Framework\TestCase//UnitTest

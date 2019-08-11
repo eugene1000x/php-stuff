@@ -1,7 +1,7 @@
 <?php
 
 
-namespace php_stuff\observer;
+namespace eugenejonas\php_stuff\observer;
 
 
 class EventEmailer extends Observer

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace php_stuff\config;
+namespace eugenejonas\php_stuff\config;
 
 
 class Config

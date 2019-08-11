@@ -1,10 +1,10 @@
 <?php
 
 
-namespace php_stuff;
+namespace eugenejonas\php_stuff;
 
 
-require_once \php_stuff\config\Config::$ROOT_DIR .'/src/intervals.php';
+require_once \eugenejonas\php_stuff\config\Config::$ROOT_DIR .'/src/intervals.php';
 
 
 /**

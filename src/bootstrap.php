@@ -3,8 +3,8 @@
 
 require_once __DIR__ .'/../vendor/autoload.php';
 
-require_once \php_stuff\config\Config::$ROOT_DIR .'/src/include.php';
+require_once \eugenejonas\php_stuff\config\Config::$ROOT_DIR .'/src/include.php';
 
 
 enableAssertions();
-//\php_stuff\config\Config::init();
+//\eugenejonas\php_stuff\config\Config::init();

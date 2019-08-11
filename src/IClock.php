@@ -1,7 +1,7 @@
 <?php
 
 
-namespace php_stuff;
+namespace eugenejonas\php_stuff;
 
 
 interface IClock

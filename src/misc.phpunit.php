@@ -1,7 +1,7 @@
 <?php
 
 
-require_once \php_stuff\config\Config::$ROOT_DIR .'/src/misc.php';
+require_once \eugenejonas\php_stuff\config\Config::$ROOT_DIR .'/src/misc.php';
 
 
 class UnitTest_doesContainOnce extends \PHPUnit\Framework\TestCase//UnitTest

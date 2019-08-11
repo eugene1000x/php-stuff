@@ -1,7 +1,7 @@
 <?php
 
 
-namespace php_stuff\csv_parser;
+namespace eugenejonas\php_stuff\csv_parser;
 
 
 /**
