@@ -3,7 +3,7 @@
 
 function error($message)
 {
-	
+	error_log($message);
 }
 
 function enableAssertions()
