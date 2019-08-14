@@ -4,18 +4,21 @@
 namespace eugenejonas\php_stuff;
 
 
-class UnitTest_FileCache extends \PHPUnit\Framework\TestCase
+use \eugenejonas\php_stuff\phpunit\MyTestCase;
+
+
+class UnitTest_FileCache extends MyTestCase
 {
 	private $cache;
 	private $absCachePath;
 	
 	
-	protected function setUp(): void
+	protected function customSetUp(): void
 	{
 		$this->absCachePath = $this->createTmpCacheFolder();
 	}
 		
-	protected function tearDown(): void
+	protected function customTearDown(): void
 	{
 		if ($this->absCachePath !== null)
 		{

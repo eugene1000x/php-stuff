@@ -4,7 +4,10 @@
 namespace eugenejonas\php_stuff;
 
 
-class UnitTest_TimePeriod extends \PHPUnit\Framework\TestCase//UnitTest
+use \eugenejonas\php_stuff\phpunit\MyTestCase;
+
+
+class UnitTest_TimePeriod extends MyTestCase
 {
 	public function test_constructor()
 	{

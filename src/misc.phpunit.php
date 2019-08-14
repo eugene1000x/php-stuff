@@ -4,7 +4,10 @@
 require_once \eugenejonas\php_stuff\config\Config::$ROOT_DIR .'/src/misc.php';
 
 
-class UnitTest_doesContainOnce extends \PHPUnit\Framework\TestCase//UnitTest
+use \eugenejonas\php_stuff\phpunit\MyTestCase;
+
+
+class UnitTest_doesContainOnce extends MyTestCase
 {
 	public function getTestData()
 	{
@@ -42,7 +45,7 @@ class UnitTest_doesContainOnce extends \PHPUnit\Framework\TestCase//UnitTest
 	}
 }
 
-class UnitTest_myExplode extends \PHPUnit\Framework\TestCase//UnitTest
+class UnitTest_myExplode extends MyTestCase
 {
 	public function getTestData()
 	{

@@ -4,7 +4,10 @@
 require_once \eugenejonas\php_stuff\config\Config::$ROOT_DIR .'/src/time.php';
 
 
-class UnitTest_floorToDay extends \PHPUnit\Framework\TestCase//UnitTest
+use \eugenejonas\php_stuff\phpunit\MyTestCase;
+
+
+class UnitTest_floorToDay extends MyTestCase
 {
 	public function getTestData()
 	{
@@ -34,7 +37,7 @@ class UnitTest_floorToDay extends \PHPUnit\Framework\TestCase//UnitTest
 	}
 }
 
-class UnitTest_floorToHour extends \PHPUnit\Framework\TestCase//UnitTest
+class UnitTest_floorToHour extends MyTestCase
 {
 	public function getTestData()
 	{
@@ -64,7 +67,7 @@ class UnitTest_floorToHour extends \PHPUnit\Framework\TestCase//UnitTest
 	}
 }
 
-class UnitTest_getNextDay extends \PHPUnit\Framework\TestCase//UnitTest
+class UnitTest_getNextDay extends MyTestCase
 {
 	public function getTestData()
 	{
