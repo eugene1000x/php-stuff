@@ -1,15 +1,17 @@
 <?php
 
 
+use \eugenejonas\php_stuff\phpunit\StaticVars;
+
+
 /**
  * Rounds down time to the beginning of the day.
  * Note that it may sometimes also be at e.g. 01:00 if DST switch happens at midnight.
  */
 function floorToDay($time)
 {
-	//TODO: Uncomment.
-	//$cache =& StaticVars::floorToDay_cache([]);		//time, timezone => floored time
-	static $cache = [];
+	$cache =& StaticVars::floorToDay_cache([]);		//time, timezone => floored time
+
 	$tz = date_default_timezone_get();
 	
 	assert($tz != '', 'timezone is not initialized?');
