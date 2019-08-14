@@ -2,6 +2,7 @@
 <!-- TODO: Use absolute path for bootstrap file. -->
 <phpunit
   beStrictAboutOutputDuringTests="true"
+  backupStaticAttributes="true"
   bootstrap="phpunit_bootstrap.php"
 >
   <testsuites>
