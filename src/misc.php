@@ -116,6 +116,42 @@ function toUtf8($str)
 	return $str;
 }
 
+/**
+ * @return string|null Full path to the created folder or null if failed.
+ */
+function createUniqueFolder(string $basePath): ?string
+{
+	$tryCount = 0;
+	$isCacheFolderCreated = false;
+	
+	do
+	{
+		$basePath .= rand(0, 9);
+		
+		$isCacheFolderCreated = @mkdir($basePath, null, true);
+		if ($isCacheFolderCreated)
+		{
+			break;
+		}
+		
+		++$tryCount;
+		if ($tryCount > 10000)
+		{
+			break;
+		}
+	}
+	while (true);
+	
+	if ($isCacheFolderCreated)
+	{
+		return $basePath;
+	}
+	else
+	{
+		return null;
+	}
+}
+
 function myExplode($delimiter, $string)
 {
 	assert(is_string($string) || $string === null, '$string must be null or string: '. dbg($string));

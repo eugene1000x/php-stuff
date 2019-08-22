@@ -30,29 +30,10 @@ class UnitTest_FileCache extends MyTestCase
 	
 	private function createTmpCacheFolder()
 	{
-		$absCachePath = \eugenejonas\php_stuff\config\Config::$ROOT_DIR .'/tmp/cache_unit_tests_';
-		$tryCount = 0;
-		$isCacheFolderCreated = false;
+		$basePath = \eugenejonas\php_stuff\config\Config::$ROOT_DIR .'/tmp/cache_unit_tests_';
+		$absCachePath = createUniqueFolder($basePath);
 		
-		do
-		{
-			$absCachePath .= rand(0, 9);
-			
-			$isCacheFolderCreated = @mkdir($absCachePath, null, true);
-			if ($isCacheFolderCreated)
-			{
-				break;
-			}
-			
-			++$tryCount;
-			if ($tryCount > 10000)
-			{
-				break;
-			}
-		}
-		while (true);
-		
-		if (!$isCacheFolderCreated)
+		if ($absCachePath === null)
 		{
 			throw new \Exception('Failed to create temporary cache folder.');
 		}
