@@ -18,8 +18,7 @@ trait Observable
 	 */
 	public function attachObserver(Observer $observer, bool $uniquely = true): bool
 	{
-		//TODO: Should compare pointers.
-		if (!$uniquely || array_search($observer, $this->observers) === false)
+		if (!$uniquely || array_search($observer, $this->observers, true) === false)
 		{
 			$this->observers []= $observer;
 			return true;
@@ -41,7 +40,7 @@ trait Observable
 			$countBefore = count($this->observers);
 			$this->observers = array_filter($this->observers, function(Observer $element) use ($observer)
 			{
-				return $observer != $element;
+				return $observer !== $element;
 			});
 			return $countBefore != count($this->observers);
 		}
