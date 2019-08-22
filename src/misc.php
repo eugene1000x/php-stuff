@@ -122,14 +122,14 @@ function toUtf8($str)
 function createUniqueFolder(string $basePath): ?string
 {
 	$tryCount = 0;
-	$isCacheFolderCreated = false;
+	$isFolderCreated = false;
 	
 	do
 	{
 		$basePath .= rand(0, 9);
 		
-		$isCacheFolderCreated = @mkdir($basePath, null, true);
-		if ($isCacheFolderCreated)
+		$isFolderCreated = @mkdir($basePath, null, true);
+		if ($isFolderCreated)
 		{
 			break;
 		}
@@ -142,7 +142,7 @@ function createUniqueFolder(string $basePath): ?string
 	}
 	while (true);
 	
-	if ($isCacheFolderCreated)
+	if ($isFolderCreated)
 	{
 		return $basePath;
 	}
